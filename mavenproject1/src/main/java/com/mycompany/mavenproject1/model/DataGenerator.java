@@ -4,10 +4,20 @@
  */
 package com.mycompany.mavenproject1.model;
 
+import com.github.javafaker.Faker;
+
 /**
  *
  * @author lihac
  */
 public class DataGenerator {
+    Faker faker = new Faker();
+    
+    public DataGenerator() {
+    }
+    
+    public String createName() {
+        return faker.name().firstName();
+    }
     
 }
